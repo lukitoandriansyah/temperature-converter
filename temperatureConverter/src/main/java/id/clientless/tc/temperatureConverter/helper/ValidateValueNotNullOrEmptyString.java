@@ -13,8 +13,7 @@ public class ValidateValueNotNullOrEmptyString {
             logger.info("Value is null");
             return false;
         }
-        if (value instanceof String) {
-            String stringValue = (String) value;
+        if (value instanceof String stringValue) {
             if (stringValue.isEmpty()) {
                 logger.info("Value is an empty String");
                 return false;

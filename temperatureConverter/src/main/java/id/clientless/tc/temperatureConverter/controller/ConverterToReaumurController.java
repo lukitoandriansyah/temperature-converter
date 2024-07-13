@@ -3,6 +3,7 @@ package id.clientless.tc.temperatureConverter.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import id.clientless.tc.temperatureConverter.model.Response;
 import id.clientless.tc.temperatureConverter.service.ConverterToReaumurService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,22 +21,22 @@ public class ConverterToReaumurController {
 
 
     @GetMapping("/celsius-to-reaumur")
-    public Response converterCelsiusToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
+    public ResponseEntity<Response> converterCelsiusToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToReaumurService.celsiusToReaumur(valueTemperature, unitTemperature);
     }
 
     @GetMapping("/fahrenheit-to-reaumur")
-    public Response converterFahrenheitToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
+    public ResponseEntity<Response> converterFahrenheitToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToReaumurService.fahrenheitToReaumur(valueTemperature, unitTemperature);
     }
 
     @GetMapping("/kelvin-to-reaumur")
-    public Response converterKelvinToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
+    public ResponseEntity<Response> converterKelvinToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToReaumurService.kelvinToReaumur(valueTemperature, unitTemperature);
     }
 
     @GetMapping("/reaumur-to-reaumur")
-    public Response converterReaumurToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
+    public ResponseEntity<Response> converterReaumurToReaumur(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToReaumurService.reaumurToReaumur(valueTemperature, unitTemperature);
     }
 
