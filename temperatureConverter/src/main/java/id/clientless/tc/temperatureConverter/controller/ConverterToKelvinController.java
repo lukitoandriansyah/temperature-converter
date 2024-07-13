@@ -34,7 +34,7 @@ public class ConverterToKelvinController {
         return converterToKelvinService.kelvinToKelvin(valueTemperature, unitTemperature);
     }
 
-    @GetMapping("/celsius-to-kelvin")
+    @GetMapping("/reaumur-to-kelvin")
     public Response converterReaumurToKelvin(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToKelvinService.reaumurToKelvin(valueTemperature, unitTemperature);
     }

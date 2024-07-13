@@ -34,7 +34,7 @@ public class ConverterToFahrenheitController {
         return converterToFahrenheitService.kelvinToFahrenheit(valueTemperature, unitTemperature);
     }
 
-    @GetMapping("/celsius-to-fahrenheit")
+    @GetMapping("/reaumur-to-fahrenheit")
     public Response converterReaumurToFahrenheit(@RequestParam String unitTemperature, @RequestParam Double valueTemperature) throws JsonProcessingException {
         return converterToFahrenheitService.reaumurToFahrenheit(valueTemperature, unitTemperature);
     }
