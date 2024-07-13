@@ -4,6 +4,8 @@ services:
   temperature-converter:
     build:
       context: .  # Menunjukkan direktori tempat Dockerfile berada
+      args:
+        APP_VERSION: v1.0 # Versi aplikasi di setting di sini
       dockerfile: Dockerfile  # Nama file Dockerfile, jika tidak bernama 'Dockerfile', sesuaikan dengan nama yang digunakan
     ports:
       - "8071:8070"  # Pemetaan port dari host ke container
